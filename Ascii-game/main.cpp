@@ -104,6 +104,12 @@ void Movement()
 		if (key == 320)
 		{	
 			w.SetBlock('-',posX+1,posY);
+		}
+		
+		//SPAWN ENEMY
+		if(key == 112)
+		{
+			
 		}			
 		cout<<key<<endl;
 	}
