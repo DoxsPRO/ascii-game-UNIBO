@@ -134,6 +134,13 @@ void Movement()
 	}
 }
 
+void Collisions()
+{
+	
+	
+	
+}
+
 int main(int argc, char** argv) {	
 	
 	Setup();
@@ -141,7 +148,7 @@ int main(int argc, char** argv) {
 	{
 		Gravity();
 		Movement();
-		//collisions
+		Collisions();
 		
 		w.SetBlock('P', posX, posY);
 		w.Print();
