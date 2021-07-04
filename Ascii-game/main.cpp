@@ -62,7 +62,7 @@ void Movement()
 			}
 			else
 			{
-				w.PreviousSection();
+				//w.PreviousSection();
 			}
 		}
 
@@ -77,7 +77,7 @@ void Movement()
 			}
 			else
 			{
-				w.NextSection();
+				//w.NextSection();
 			}
 		}
 
@@ -86,6 +86,14 @@ void Movement()
 		{
 			if(w.BlockAt(posX, posY+1)!=32)
 				jumping=15;
+		}
+		
+		//FIRE
+		if (key == 320)
+		{
+			
+			
+			
 		}			
 		cout<<key<<endl;
 	}
@@ -94,7 +102,7 @@ void Movement()
 int main(int argc, char** argv) {	
 	
 	Setup();
-	while(false)
+	while(true)
 	{
 		Gravity();
 		Movement();
