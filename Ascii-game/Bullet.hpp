@@ -1,0 +1,8 @@
+class Bullet
+{
+	protected:
+		
+	
+	public:
+		
+};

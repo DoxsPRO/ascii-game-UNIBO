@@ -120,9 +120,10 @@ void Movement()
 						w.SetBlock('-', posP++, posY);
 					}	
 				}
+				a++;
 			}
 				
-			a++;	
+				
 		}
 		//SPAWN ENEMY
 		if(key == 112) //p
