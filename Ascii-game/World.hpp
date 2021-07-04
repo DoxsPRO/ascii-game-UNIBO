@@ -23,7 +23,7 @@ class World
 		
 		void NextSection();
 		void PreviousSection();
-		Nodo *CreaNodo();
+		//Nodo *CreaNodo();
 		void App(); //append
 		void CaricaMat(char sec[96][16]);
 		//crea chunk
