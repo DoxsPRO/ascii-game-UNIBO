@@ -1,11 +1,10 @@
-class Player 
+class Enemy
 {
 	protected:
 		int x=0, y=0;
-		char ascii='O';
-		char stats[100]="100   100 coin";
+		char ascii = '@';
 		int health = 100;
-		
+	
 	public:
 		void GetPosition(int &posX, int &posY);
 		void Move(int posX, int posY);
@@ -13,4 +12,4 @@ class Player
 		void setHealth(int setH);
 		void Tick();
 		void PrintStats();
-};
+}

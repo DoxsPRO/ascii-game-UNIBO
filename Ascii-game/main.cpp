@@ -90,10 +90,8 @@ void Movement()
 		
 		//FIRE
 		if (key == 320)
-		{
-			
-			
-			
+		{	
+			w.SetBlock('-',posX+1,posY);
 		}			
 		cout<<key<<endl;
 	}
