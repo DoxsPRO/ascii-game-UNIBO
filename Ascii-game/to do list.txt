@@ -1,0 +1,16 @@
+Main
+1)Scena finale
+
+Enemy
+-Movimenti
+-Sparo
+-Salute
+-Scan
+-Morte
+
+Player
+-Raccolta coin
+
+Proiettili
+-Movimenti
+-Collissione
