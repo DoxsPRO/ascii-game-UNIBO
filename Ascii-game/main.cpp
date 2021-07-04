@@ -62,7 +62,7 @@ void Movement()
 			}
 			else
 			{
-				w.PreviousSection();
+				//w.PreviousSection();
 			}
 		}
 
@@ -77,7 +77,7 @@ void Movement()
 			}
 			else
 			{
-				w.NextSection();
+				//w.NextSection();
 			}
 		}
 
@@ -94,7 +94,7 @@ void Movement()
 int main(int argc, char** argv) {	
 	
 	Setup();
-	while(false)
+	while(true)
 	{
 		Gravity();
 		Movement();

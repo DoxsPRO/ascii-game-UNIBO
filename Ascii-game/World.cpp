@@ -11,7 +11,7 @@ void World::Init()
 	maxY=16;
 	
 	//pointer=CreaNodo();
-	pointer->prev=NULL;
+	//pointer->prev=NULL;
 	
 	for(int i=0; i<96; i++)
 	{
@@ -21,7 +21,12 @@ void World::Init()
 		}
 	}
 	
-	CaricaMat(pointer->sec);
+	for(int i=0; i<96; i++)
+	{
+			map[i][15]='=';
+	}
+	
+	//CaricaMat(pointer->sec);
 }
 
 void World::CaricaMat(char sec[96][16])
