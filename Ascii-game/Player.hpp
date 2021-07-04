@@ -10,9 +10,8 @@ class Player
 	public:
 		void GetPosition(int &posX, int &posY);
 		void Move(int posX, int posY);
-		void setHealth(int setH);
-		void setCoin(int setC);
-		void updateStats();
+		void setHealth(int setHealth);
+		void setCoin(int setCoin);
 		void Tick();
 		void PrintStats();
 };

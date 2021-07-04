@@ -1,6 +1,7 @@
 #include "Player.hpp"
 #include <conio.h>
-#include <iostream> 
+#include <iostream>
+
 using namespace std;
 
 void Player::GetPosition(int &posX, int &posY)
@@ -28,4 +29,18 @@ void Player::PrintStats()
 		
 	cout<<endl;
 }
+
+void Player::setHealth(int setHealth)
+{
+	health = setHealth;
+	updateStats();
+}
+
+void Player::setCoin(int setCoin)
+{
+	coin = setCoin;
+	updateStats();
+}
+
+
 
