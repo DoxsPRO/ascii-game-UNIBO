@@ -62,7 +62,7 @@ void Movement()
 			}
 			else
 			{
-				//w.PreviousSection();
+				w.PreviousSection();
 			}
 		}
 
@@ -77,7 +77,7 @@ void Movement()
 			}
 			else
 			{
-				//w.NextSection();
+				w.NextSection();
 			}
 		}
 

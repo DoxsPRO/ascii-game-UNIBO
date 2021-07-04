@@ -29,13 +29,3 @@ void Player::PrintStats()
 	cout<<endl;
 }
 
-void Player::getHealth()
-{
-	
-}
-
-void Player::setHealth(int setH)
-{
-	health = setH;		
-}
-
