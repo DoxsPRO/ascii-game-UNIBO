@@ -22,7 +22,7 @@ class World
 		void SetBlock(char c, int x, int y);
 		
 		void NextSection();
-		void PreviousSection();
+		bool PreviousSection();
 		void CreaNodo();
 		void App(); //append
 		void CaricaMat(Nodo *n);

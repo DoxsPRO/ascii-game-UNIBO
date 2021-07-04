@@ -84,9 +84,15 @@ void World::NextSection()
 	CaricaMat(pointer);
 }
 
-void World::PreviousSection()
+bool World::PreviousSection()
 {
+	if(pointer->prev==NULL)
+		return false;
+		
+	pointer=pointer->prev;
+	CaricaMat(pointer);
 	
+	return true;
 }
 
 void World::CreaNodo()

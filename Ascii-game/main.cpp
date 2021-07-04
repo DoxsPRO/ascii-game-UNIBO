@@ -60,9 +60,18 @@ void Movement()
 				posX--;
 				p.Move(posX, posY);
 			}
-			else
+			else if(posX==0)
 			{
-				w.PreviousSection();
+				w.SetBlock(' ', posX, posY);
+				if(w.PreviousSection())
+				{
+					posX=95;
+					p.Move(posX, posY);
+				}
+				else
+					w.SetBlock('P', posX, posY);
+		
+				
 			}
 		}
 
@@ -75,9 +84,12 @@ void Movement()
 				posX++;
 				p.Move(posX, posY);
 			}
-			else
+			else if(posX==95)
 			{
+				w.SetBlock(' ', posX, posY);
 				w.NextSection();
+				posX=0;
+				p.Move(posX, posY);
 			}
 		}
 
