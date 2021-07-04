@@ -86,6 +86,14 @@ void Movement()
 		{
 			if(w.BlockAt(posX, posY+1)!=32)
 				jumping=15;
+		}
+		
+		//FIRE
+		if (key == 320)
+		{
+			
+			
+			
 		}			
 		cout<<key<<endl;
 	}

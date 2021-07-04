@@ -26,6 +26,9 @@ void World::Init()
 			map[i][15]='=';
 	}
 	
+	Chunks ch;
+	ch.Init();
+	
 	//CaricaMat(pointer->sec);
 }
 
