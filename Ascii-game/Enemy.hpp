@@ -17,10 +17,5 @@ class Enemy
 		Nodo *testa, *coda;
 	
 	public:
-		void GetPosition(int &posX, int &posY);
-		void Move(int posX, int posY);
-		void setHealth(int setH);
-		void setDifficulty(int setDiff);
-		double getTotalDamage(); //danno totale moltiplicato in base alla difficolta del nemico
-		void Tick();
+		
 };
