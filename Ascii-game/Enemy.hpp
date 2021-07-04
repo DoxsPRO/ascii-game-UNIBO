@@ -12,4 +12,4 @@ class Enemy
 		void setHealth(int setH);
 		void Tick();
 		void PrintStats();
-}
+};
