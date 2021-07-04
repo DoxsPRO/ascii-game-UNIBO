@@ -107,22 +107,23 @@ void Movement()
 			int a = 0;
 			while(a<=5)
 			{
-				
+				if(w.BlockAt(posP, posY)==' ')
+				{
 					if(a == 0)
 					{
 						w.SetBlock('-', posP, posY);
+						posP++;
 					}
-					else if(w.BlockAt(posP, posY)==' ')
+					else 
 					{
-						w.SetBlock(' ', posP-1, posY);
+						w.SetBlock(' ', posP-2, posY);
 						w.SetBlock('-', posP++, posY);
 					}	
 				}
-				
-				a++;	
 			}
-		
-		
+				
+			a++;	
+		}
 		//SPAWN ENEMY
 		if(key == 112) //p
 		{
