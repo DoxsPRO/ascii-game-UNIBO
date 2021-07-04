@@ -121,7 +121,7 @@ void Movement()
 				
 				a++;	
 			}
-		}
+		
 		
 		//SPAWN ENEMY
 		if(key == 112) //p
