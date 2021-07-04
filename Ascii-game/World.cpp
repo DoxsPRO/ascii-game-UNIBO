@@ -77,7 +77,8 @@ void World::SetBlock(char c, int x, int y)
 
 void World::NextSection()
 {
-	
+	if()
+	CreaNodo();
 }
 
 void World::PreviousSection()
