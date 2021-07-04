@@ -23,23 +23,18 @@ void Player::Tick()
 
 void Player::PrintStats()
 {
-	stats[4]=03;
-	for(int i=0; i<100; i++)
-		cout<<stats[i];
-		
+	cout<<health<<" "<<char(03)<<"  "<<coin<<" $";	
 	cout<<endl;
 }
 
-void Player::setHealth(int setHealth)
+void Player::setHealth(int setH)
 {
-	health = setHealth;
-	updateStats();
+	health = setH;
 }
 
-void Player::setCoin(int setCoin)
+void Player::setCoin(int setC)
 {
-	coin = setCoin;
-	updateStats();
+	coin = setC;
 }
 
 
