@@ -17,5 +17,5 @@ class Enemy
 		Nodo *testa, *coda;
 	
 	public:
-		s
+		
 };
