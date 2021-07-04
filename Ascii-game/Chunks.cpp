@@ -54,7 +54,20 @@ char **Chunks::GetRandom()
 {
 	Nodo *t=testa;
 	
-	testa->chunk;
+	char **temp=new char *[32];
+	
+	for(int i=0; i<32; i++)
+		temp[i]=new char[16];
+		
+	for(int i=0; i<16 ; i++)
+	{
+		for(int j=0; j<32 ; j++)
+		{
+			temp[j][i]=testa->chunk[j][i];
+		}
+	}
+	
+	return temp;
 	
 }
 
@@ -114,7 +127,7 @@ void Chunks::Init()
 			"               ====             "
 			"================================", 0);
 			
-	Print();
+	//Print();
 			
 			
 			

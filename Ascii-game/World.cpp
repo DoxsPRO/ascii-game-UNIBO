@@ -10,8 +10,6 @@ void World::Init()
 	maxX=96;
 	maxY=16;
 	
-	//pointer=CreaNodo();
-	//pointer->prev=NULL;
 	
 	for(int i=0; i<96; i++)
 	{
@@ -26,19 +24,22 @@ void World::Init()
 			map[i][15]='=';
 	}
 	
-	Chunks ch;
-	ch.Init();
+	pointer=NULL;
+	CreaNodo();
+	CaricaMat(pointer);
 	
+	//pointer=CreaNodo();
+	//pointer->prev=NULL;
 	//CaricaMat(pointer->sec);
 }
 
-void World::CaricaMat(char sec[96][16])
+void World::CaricaMat(Nodo *n)
 {
 	for(int i=0; i<96; i++)
 	{
 		for(int j=0; j<16; j++)
 		{
-			map[i][j]=sec[j][i];
+			map[j][i]=n->sec[j][i];
 		}
 	}
 }
@@ -88,29 +89,42 @@ void World::PreviousSection()
 	
 }
 
-/*World::Nodo *CreaNodo()
+void World::CreaNodo()
 {
-	World::Nodo *temp=new World::Nodo;
-	//Chunks ch;
+	Nodo *temp=new Nodo;
+	temp->next=NULL;
+	
+	Chunks ch;
+	ch.Init();
 	
 	for(int z=0; z<3; z++)
 	{
-		//char **chunk=ch.GetRandom();
+		char **chunk=ch.GetRandom();
 		
 		for(int i=0; i<16; i++)
 		{
 			for(int j=0; j<32 ; j++)
 			{
-				//temp->sec[j+(32*z)][i]=chunk[j][i];
+				temp->sec[j+(32*z)][i]=chunk[j][i];
 			}
 		}
 	}
 	
-	temp->next=NULL;
+	if(pointer ==NULL)
+	{
+		pointer=temp;
+		return;
+	}
+	else
+	{
+		pointer->next=temp;
+		temp->prev=pointer;
+		pointer=temp;
+		return;
+	}
 	
 	
-	return temp;
-}*/
+}
 
 void World::App()
 {
