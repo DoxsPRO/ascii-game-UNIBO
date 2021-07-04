@@ -101,13 +101,22 @@ void Movement()
 		}
 		
 		//FIRE
-		if (key == 320)
-		{	
-			w.SetBlock('-',posX+1,posY);
+		if (key == 32)
+		{
+			int posP = posX;
+			int a = 0;
+			while(a<=5)
+			{
+				w.SetBlock(' ', posP, posY);
+				posP += 1;
+				w.SetBlock('-', posP, posY);
+				//w.SetBlock('-', posP++, posY);
+				a++;
+			}
 		}
 		
 		//SPAWN ENEMY
-		if(key == 112)
+		if(key == 112) //p
 		{
 			
 		}			
@@ -123,7 +132,7 @@ int main(int argc, char** argv) {
 		Gravity();
 		Movement();
 		//collisions
-	
+		
 		w.SetBlock('P', posX, posY);
 		w.Print();
 		p.PrintStats();
