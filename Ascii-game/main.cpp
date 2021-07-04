@@ -107,15 +107,19 @@ void Movement()
 			int a = 0;
 			while(a<=5)
 			{
-				if(a == 0)
+				if(w.BlockAt(posP, posY)==' ')
 				{
-					w.SetBlock('-', posP, posY);
+					if(a == 0)
+					{
+						w.SetBlock('-', posP, posY);
+					}
+					else
+					{
+						w.SetBlock(' ', posP-1, posY);
+						w.SetBlock('-', posP++, posY);
+					}	
 				}
-				else
-				{
-					w.SetBlock(' ', posP-1, posY);
-					w.SetBlock('-', posP++, posY);
-				}
+				
 				a++;	
 			}
 		}
