@@ -10,7 +10,7 @@ void World::Init()
 	maxX=96;
 	maxY=16;
 	
-	pointer=CreaNodo();
+	//pointer=CreaNodo();
 	pointer->prev=NULL;
 	
 	for(int i=0; i<96; i++)
@@ -80,7 +80,7 @@ void World::PreviousSection()
 	
 }
 
-World::Nodo *CreaNodo()
+/*World::Nodo *CreaNodo()
 {
 	World::Nodo *temp=new World::Nodo;
 	//Chunks ch;
@@ -102,7 +102,7 @@ World::Nodo *CreaNodo()
 	
 	
 	return temp;
-}
+}*/
 
 void World::App()
 {

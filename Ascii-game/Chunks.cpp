@@ -50,10 +50,11 @@ void Chunks::Print()
 	}
 }
 
-char Chunks::**GetRandom()
+char **Chunks::GetRandom()
 {
+	Nodo *t=testa;
 	
-	return testa->chunk;
+	testa->chunk;
 	
 }
 
