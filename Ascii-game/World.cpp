@@ -27,17 +27,13 @@ void World::Init()
 	pointer=NULL;
 	CreaNodo();
 	CaricaMat(pointer);
-	
-	//pointer=CreaNodo();
-	//pointer->prev=NULL;
-	//CaricaMat(pointer->sec);
 }
 
 void World::CaricaMat(Nodo *n)
 {
-	for(int i=0; i<96; i++)
+	for(int i=0; i<16; i++)
 	{
-		for(int j=0; j<16; j++)
+		for(int j=0; j<96; j++)
 		{
 			map[j][i]=n->sec[j][i];
 		}

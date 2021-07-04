@@ -1,5 +1,7 @@
 #include "Chunks.hpp"
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 using namespace std;
 
 void Chunks::Append(char *text, int level)
@@ -52,7 +54,20 @@ void Chunks::Print()
 
 char **Chunks::GetRandom()
 {
+	int max=coda->id + 1;
+	
+	int r=rand() % max; //random number
+	
+	
 	Nodo *t=testa;
+	
+	while(r>0)
+	{
+		t=t->next;
+		r--;
+	}
+	
+	//system("pause");
 	
 	char **temp=new char *[32];
 	
@@ -63,9 +78,10 @@ char **Chunks::GetRandom()
 	{
 		for(int j=0; j<32 ; j++)
 		{
-			temp[j][i]=testa->chunk[j][i];
+			temp[j][i]=t->chunk[j][i];
 		}
 	}
+	//system("pause");
 	
 	return temp;
 	
@@ -73,6 +89,7 @@ char **Chunks::GetRandom()
 
 void Chunks::Init()
 {
+	srand (time(NULL));
 	testa=NULL;
 	AId=0;
 	
