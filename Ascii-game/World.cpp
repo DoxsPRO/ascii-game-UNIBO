@@ -99,6 +99,7 @@ void World::CreaNodo()
 {
 	Nodo *temp=new Nodo;
 	temp->next=NULL;
+	temp->prev=NULL;
 	
 	Chunks ch;
 	ch.Init();
