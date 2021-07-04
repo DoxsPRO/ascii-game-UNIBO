@@ -103,14 +103,20 @@ void Movement()
 		//FIRE
 		if (key == 32)
 		{
-			int posP = posX;
+			int posP = posX + 1;
 			int a = 0;
 			while(a<=5)
 			{
-				posP += 1;
-				w.SetBlock('-', posP, posY);
-				w.SetBlock(' ', posP++, posY);
-				a++;
+				if(a == 0)
+				{
+					w.SetBlock('-', posP, posY);
+				}
+				else
+				{
+					w.SetBlock(' ', posP-1, posY);
+					w.SetBlock('-', posP++, posY);
+				}
+				a++;	
 			}
 		}
 		
