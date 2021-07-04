@@ -77,8 +77,11 @@ void World::SetBlock(char c, int x, int y)
 
 void World::NextSection()
 {
-	if()
-	CreaNodo();
+	if(pointer->next==NULL)
+		CreaNodo();
+		
+	pointer=pointer->next;
+	CaricaMat(pointer);
 }
 
 void World::PreviousSection()
@@ -116,22 +119,13 @@ void World::CreaNodo()
 	{
 		pointer->next=temp;
 		temp->prev=pointer;
-		pointer=temp;
+		
 		return;
 	}
 	
 	
 }
-
-void World::App()
-{
 	
-	
-	
-	
-	
-}
-		
 		
 		
 		
