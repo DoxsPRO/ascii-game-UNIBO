@@ -271,6 +271,7 @@ int main(int argc, char** argv) {
 		w.Print();
 		p.PrintStats();
 		cout<<"\t "<<en.getDamage()<<"\tDMG"<<endl;
+		cout<<"Killed enemy "<<en.GetKilled()<<endl;
 		
 		cout<<posX<<" "<<posY<<endl;
 		cout<<"Tot. enemy= "<<en.count<<endl;

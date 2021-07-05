@@ -13,6 +13,5 @@ class Player
 		int getHealth();
 		int getCoin();
 		void setCoin(int setC);
-		void Tick();
 		void PrintStats();
 };
