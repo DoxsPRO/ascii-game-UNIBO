@@ -2,15 +2,11 @@ Main
 1)Scena finale
 
 Enemy
--Movimenti
 -Sparo
--Scan
--collisione proiettile
--forse radom
+//molto forse radom
 
 
 Proiettili
 
 ------------
 Personaggio
--evitare spam

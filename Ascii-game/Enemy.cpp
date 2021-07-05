@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <iostream>
 
+
 using namespace std;
 
 void Enemy::ScanEnemy(char **map)
@@ -41,35 +42,44 @@ char **Enemy::Tick(char **map)
 	{
 		if(enemies[i].alive)
 		{
-			if(map[enemies[i].x-1][enemies[i].y] == '-')
+			enemies[i].still--;
+			if(map[enemies[i].x-1][enemies[i].y]=='-')//damage
 			{
-				enemies[i].health -= 10;
+				enemies[i].health-=50;
+				map[enemies[i].x-1][enemies[i].y]=' ';
 				
-				if(enemies[i].health <= 0)
-				{
-					enemies[i].alive = false;
-				}
 			}
-			else if(map[enemies[i].x-1][enemies[i].y] == '=')
+			if(enemies[i].health<=0)
 			{
-				if(map[enemies[i].x+1][enemies[i].y] != '=' && map[enemies[i].x+1][enemies[i].y] != '$' && map[enemies[i].x+1][enemies[i].y] != '@')
-				{
-					if(enemies[i].x<95)
-						enemies[i].x++;
-					//aggiungere alternativa
-				}		
+				map[enemies[i].x][enemies[i].y]=' ';
+				enemies[i].alive=false;
+				
+				continue;
 			}
-			else if(map[enemies[i].x-1][enemies[i].y] == '$')
+			
+			if(map[enemies[i].x][enemies[i].y+1]==' ')
 			{
-				if(enemies[i].x>=2 && map[enemies[i].x-2][enemies[i].y] != '=' && map[enemies[i].x-2][enemies[i].y] != '$' && map[enemies[i].x-2][enemies[i].y] != '@')
-					enemies[i].x -= 2;
-				else if(map[enemies[i].x+1][enemies[i].y] != '=' && map[enemies[i].x+1][enemies[i].y] != '$' && map[enemies[i].x+1][enemies[i].y] != '@')
+				map[enemies[i].x][enemies[i].y]=' ';
+				enemies[i].y++;
+				map[enemies[i].x][enemies[i].y]=enemies[i].ascii;
+			}			
+			else if(enemies[i].still<=0)
+			{
+				if(map[enemies[i].x+enemies[i].d][enemies[i].y]==' ' && (enemies[i].x+enemies[i].d<95) && (enemies[i].x+enemies[i].d>0))
 				{
-					if(enemies[i].x<95)
-						enemies[i].x++;
-					//aggiungere alternativa
+					enemies[i].still=5;
+					map[enemies[i].x][enemies[i].y]=' ';
+					enemies[i].x+=enemies[i].d;
+					map[enemies[i].x][enemies[i].y]=enemies[i].ascii;	
 				}
+				else
+					enemies[i].d*=-1;
 			}
+			
+			
+			
+			
+			
 		}
 	}
 	return map;

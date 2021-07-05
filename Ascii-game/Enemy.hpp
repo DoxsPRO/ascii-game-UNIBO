@@ -5,11 +5,13 @@ class Enemy
 		{			
 			int id;
 			int x=0, y=0;
+			int d=-1; //direction
 			char ascii = '@';
 			int health = 100;
 			int damage = 10;
 			double diffuculty = 1;
 			bool alive=false;
+			int still=0;
 			int lastFire=10;
 		};
 		

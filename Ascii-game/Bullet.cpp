@@ -11,14 +11,13 @@ char **Bullet::Tick(char **map)
 			bullets[i].active=false;
 			map[bullets[i].x][bullets[i].y]=' ';
 		}
-		
-		if(bullets[i].active && bullets[i].x<95 && map[bullets[i].x+bullets[i].d][bullets[i].y]==' ')
+		else if(bullets[i].active && bullets[i].x<94 && map[bullets[i].x+bullets[i].d][bullets[i].y]==' ')
 		{
 			map[bullets[i].x][bullets[i].y]=' ';
 			bullets[i].x+=bullets[i].d;
 			map[bullets[i].x][bullets[i].y]='-';
 		}
-		else if(bullets[i].active && bullets[i].x>=95 || map[bullets[i].x+bullets[i].d][bullets[i].y]=='=')
+		else if(bullets[i].active && bullets[i].x>=94 || map[bullets[i].x+bullets[i].d][bullets[i].y]=='=')
 		{
 			map[bullets[i].x][bullets[i].y]=' ';
 			bullets[i].active=false;

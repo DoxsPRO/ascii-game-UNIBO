@@ -106,7 +106,8 @@ bool World::PreviousSection()
 {
 	if(pointer->prev==NULL)
 		return false;
-		
+	
+	SalvaMat(pointer);
 	pointer=pointer->prev;
 	CaricaMat(pointer);
 	

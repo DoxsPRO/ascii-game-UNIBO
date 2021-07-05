@@ -86,7 +86,6 @@ void Movement()
 				w.SetBlock(' ', posX, posY);
 				if(w.PreviousSection())
 				{
-					
 					w.Copy(bt.Delete(w.GetMap()));
 					en.ScanEnemy(w.GetMap());
 					posX=95;
@@ -102,6 +101,14 @@ void Movement()
 				w.SetBlock(' ', posX, posY); //cancello dollaro
 				p.Move(posX, posY);
 				p.setCoin(1);
+			}
+			else if(w.BlockAt(posX-1, posY)==03)
+			{
+				w.SetBlock(' ', posX, posY);
+				posX--;
+				w.SetBlock(' ', posX, posY); //cancello cuore
+				p.Move(posX, posY);
+				p.setHealth(5);
 			}
 			else if(w.BlockAt(posX-1, posY)=='@')
 			{
@@ -138,6 +145,14 @@ void Movement()
 				p.Move(posX, posY);
 				p.setCoin(1);
 			}
+			else if(w.BlockAt(posX+1, posY)==03)
+			{
+				w.SetBlock(' ', posX, posY);
+				posX++;
+				w.SetBlock(' ', posX, posY); //cancello cuore
+				p.Move(posX, posY);
+				p.setHealth(5);
+			}
 			else if(w.BlockAt(posX+1, posY)=='@')
 			{
 				w.SetBlock(' ', posX, posY);
@@ -157,15 +172,14 @@ void Movement()
 		//FIRE
 		if (key == 32)
 		{
-			if(firing<=0)
+			if(firing<=0 && posX<94)
 			{
 				bt.SpawnBullet(posX, posY, 1);
-				firing=3;
+				firing=5;
 			}			
-				
-			firing--;
 		}
-				
+		
+		
 		cout<<key<<endl;		
 	}
 				
@@ -176,6 +190,7 @@ void Movement()
 void Tick()
 {
 	Gravity();
+	firing--;
 	Movement();
 	
 	char **map=w.GetMap();
