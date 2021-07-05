@@ -223,13 +223,10 @@ void Movement()
 				p.setCoin(-15);
 				en.SetDamage(5);
 			}
-			else
-			{
-				cout<<"Stai senz n'eur zingar!\n";	
-			}
+					
 		}
 		
-		cout<<key<<endl;		
+		//cout<<key<<endl;		
 	}
 				
 		
@@ -294,8 +291,8 @@ int main(int argc, char** argv) {
 		p.PrintStats();
 		cout<<"\t "<<en.getDamage()<<"\tDMG"<<endl;
 		cout<<"Killed enemy "<<en.GetKilled()<<endl;
-		cout<<"Tot. enemy= "<<en.numEnemy<<endl;
-		cout<<posX<<" "<<posY<<endl;
+		cout<<"15$ = 5 DMG !\n";
+		//cout<<posX<<" "<<posY<<endl;
 		
 		
 		if(p.getHealth() <= 0)
@@ -307,7 +304,7 @@ int main(int argc, char** argv) {
 	}
 	system("cls");
 	endGame();
-	cout<<"Hai raccolto in totale: "<<p.getCoin()<<"$ !"<<endl;
+	cout<<"You have collected in total: "<<p.getCoin()<<"$ !"<<endl;
 	system("pause");
 	return 0;
 }
