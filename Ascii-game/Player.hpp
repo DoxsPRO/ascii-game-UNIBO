@@ -3,7 +3,7 @@ class Player
 	protected:
 		int x=0, y=14;
 		char ascii='O';
-		int health = 100;
+		int health = 0;
 		int coin = 0;
 		
 	public:

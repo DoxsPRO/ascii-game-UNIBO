@@ -6,13 +6,14 @@ Enemy
 -Sparo
 
 -Scan
--Morte
+
 
 Proiettili
--Movimenti
+-durata
 -Collissione
 
 ------------
 Personaggio
 -Coin (Raccolta destra sinistra e sotto)
 -Salute (Perdita di vita sui nemici)
+-Morte
