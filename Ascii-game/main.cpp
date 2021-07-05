@@ -4,14 +4,12 @@
 #include "Player.hpp"
 #include "World.hpp"
 #include "Enemy.hpp"
-#include "Bullet.hpp"
 using namespace std;
 
 
 Player p;
 World w;
 Enemy en;
-Bullet bt;
 int posX, posY;
 int jumping=0, firing=0;
 int diff=1;
@@ -103,9 +101,10 @@ void Movement()
 			else if(posX==0)
 			{
 				w.SetBlock(' ', posX, posY);
+				w.Copy(p.Delete(w.GetMap()));
 				if(w.PreviousSection())
 				{
-					w.Copy(bt.Delete(w.GetMap()));
+					
 					en.ScanEnemy(w.GetMap());
 					posX=95;
 					p.Move(posX, posY);
@@ -158,7 +157,7 @@ void Movement()
 			}
 			else if(posX==95)
 			{
-				w.Copy(bt.Delete(w.GetMap()));
+				w.Copy(p.Delete(w.GetMap()));
 				w.SetBlock(' ', posX, posY);
 				w.NextSection();
 				en.ScanEnemy(w.GetMap());
@@ -211,7 +210,7 @@ void Movement()
 		{
 			if(firing<=0 && posX<94)
 			{
-				bt.SpawnBullet(posX, posY, 1);
+				p.SpawnBullet(posX, posY, 1);
 				firing=5;
 			}			
 		}
@@ -257,7 +256,7 @@ void Tick()
 	
 	char **map=w.GetMap();
 	map=en.Tick(map);
-	map=bt.Tick(map);
+	map=p.BTick(map);
 	
 	w.Copy(map);
 }

@@ -12,7 +12,7 @@ class Enemy
 			double diffuculty = 1;
 			bool alive=false;
 			int still=0;
-			int lastFire=10;
+			int lastFire;
 		};
 		
 		

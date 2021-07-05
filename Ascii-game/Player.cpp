@@ -41,3 +41,18 @@ int Player::getCoin()
 	return coin;
 }
 
+char **Player::BTick(char **map)
+{
+	return bt.Tick(map);
+}
+
+void Player::SpawnBullet(int x, int y, int d)
+{
+	bt.SpawnBullet(x, y, 1);
+}
+
+char **Player::Delete(char **map)
+{
+	return bt.Delete(map);
+}
+
