@@ -6,7 +6,20 @@ using namespace std;
 
 void Enemy::ScanEnemy(char **map)
 {
-	
+	for(int i=0;i<16;i++)
+	{
+		for(int j=0;j<96;j++)
+		{
+			if(map[j][i] == '@')
+			{
+				enemies[count].id = count;
+				enemies[count].x = j;
+				enemies[count].y = i;
+				enemies[count].alive = true;
+				count++;
+			}
+		}
+	}
 }
 
 
