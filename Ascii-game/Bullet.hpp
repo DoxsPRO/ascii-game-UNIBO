@@ -11,5 +11,7 @@ class Bullet
 		struct Nodo bullets[100];
 
 	public:
+		char **Tick(char **map);
+		
 		
 };

@@ -2,20 +2,24 @@ class Enemy
 {
 	protected:
 		struct Nodo
-		{
-			Nodo *next;
-			Nodo *prev;
-			
-			int idEnemy;
+		{			
+			int id;
 			int x=0, y=0;
 			char ascii = '@';
 			int health = 100;
 			int damage = 10;
 			double diffuculty = 1;
+			bool alive=false;
+			int lastFire=10;
 		};
 		
-		Nodo *testa, *coda;
+		Nodo enemies[10];
 	
 	public:
+		void ScanEnemy(char **map);
+		int EnemyAt(int x, int y); //restituisce l'id
+		void Clear();
+		char **Tick(char **map);
+		
 		
 };
