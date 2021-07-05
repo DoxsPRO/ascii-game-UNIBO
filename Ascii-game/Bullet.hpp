@@ -8,7 +8,7 @@ class Bullet
 			int damage = 10;
 			bool active=false;
 			int id;
-			int time=5;
+			int time=10;
 		};
 		
 		int count=0;
@@ -18,7 +18,6 @@ class Bullet
 	public:
 		char **Tick(char **map);
 		void SpawnBullet(int x, int y, int d);
-		void Clear();
 		char **Delete(char **map);
 		
 		

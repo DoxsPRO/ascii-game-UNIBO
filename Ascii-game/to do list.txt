@@ -5,11 +5,12 @@ Enemy
 -Movimenti
 -Sparo
 -Scan
+-collisione proiettile
+-forse radom
 
 
 Proiettili
--durata
--Collissione
 
 ------------
 Personaggio
+-evitare spam
