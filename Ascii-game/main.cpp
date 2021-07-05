@@ -216,6 +216,19 @@ void Movement()
 			}			
 		}
 		
+		// BUY BOOST
+		if (key == 13)
+		{
+			if(p.getCoin() >= 15)
+			{
+				p.setCoin(-15);
+				en.SetDamage(5);
+			}
+			else
+			{
+				cout<<"Stai senz n'eur zingar!\n";	
+			}
+		}
 		
 		cout<<key<<endl;		
 	}
@@ -283,9 +296,9 @@ int main(int argc, char** argv) {
 		p.PrintStats();
 		cout<<"\t "<<en.getDamage()<<"\tDMG"<<endl;
 		cout<<"Killed enemy "<<en.GetKilled()<<endl;
-		
-		cout<<posX<<" "<<posY<<endl;
 		cout<<"Tot. enemy= "<<en.numEnemy<<endl;
+		cout<<posX<<" "<<posY<<endl;
+		
 		
 		if(p.getHealth() <= 0)
 		{

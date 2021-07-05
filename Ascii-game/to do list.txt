@@ -1,5 +1,4 @@
 Main
--Pulizia livello punti bonus
 
 Enemy
 -tipi di nemici
