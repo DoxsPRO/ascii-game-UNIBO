@@ -21,6 +21,7 @@ class Enemy
 		int killed=0;
 
 	public:
+		int numEnemy = 0;
 		int count=0;
 		void ScanEnemy(char **map);
 		char **Tick(char **map);

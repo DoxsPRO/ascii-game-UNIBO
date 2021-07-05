@@ -8,6 +8,7 @@ using namespace std;
 void Enemy::ScanEnemy(char **map)
 {
 	count=0;
+	numEnemy=0;
 	
 	for(int i=0;i<16;i++)
 	{
@@ -21,6 +22,7 @@ void Enemy::ScanEnemy(char **map)
 				enemies[count].alive = true;
 				enemies[count].health=100;
 				count++;
+				numEnemy++;
 			}
 		}
 	}
@@ -44,6 +46,7 @@ char **Enemy::Tick(char **map)
 				map[enemies[i].x][enemies[i].y]=' ';
 				enemies[i].alive=false;
 				killed++;
+				numEnemy--;
 				
 				continue;
 			}

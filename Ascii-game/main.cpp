@@ -224,11 +224,22 @@ void Movement()
 	
 }
 
+void CheckLeverClear()
+{
+	if(en.numEnemy == 0)
+	{
+		p.setCoin(5);
+		en.numEnemy = -1;
+	}
+		
+}
+
 void Tick()
 {
 	Gravity();
 	firing--;
 	Movement();
+	CheckLeverClear();
 	en.SetDamage(-0.05);
 	
 	char **map=w.GetMap();
@@ -274,7 +285,7 @@ int main(int argc, char** argv) {
 		cout<<"Killed enemy "<<en.GetKilled()<<endl;
 		
 		cout<<posX<<" "<<posY<<endl;
-		cout<<"Tot. enemy= "<<en.count<<endl;
+		cout<<"Tot. enemy= "<<en.numEnemy<<endl;
 		
 		if(p.getHealth() <= 0)
 		{
