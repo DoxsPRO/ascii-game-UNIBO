@@ -4,7 +4,7 @@ Main
 Enemy
 -Movimenti
 -Sparo
--Salute
+
 -Scan
 -Morte
 
@@ -15,3 +15,4 @@ Proiettili
 ------------
 Personaggio
 -Coin (Raccolta destra sinistra e sotto)
+-Salute (Perdita di vita sui nemici)

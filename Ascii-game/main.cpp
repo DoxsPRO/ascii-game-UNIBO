@@ -48,14 +48,22 @@ void Gravity()
 			jumping--;
 		}
 		else if(w.BlockAt(posX, posY+1)=='$' && jumping<=0)
-			{
-				w.SetBlock(' ', posX, posY);
-				w.SetBlock(' ', posX, posY+1);
-				posX++;
-				p.Move(posX, posY);
-				p.setCoin(1);
-				jumping++;
-			}
+		{
+			w.SetBlock(' ', posX, posY);
+			w.SetBlock(' ', posX, posY+1);
+			posX++;
+			p.Move(posX, posY);
+			p.setCoin(1);
+			jumping++;
+		}
+		else if(w.BlockAt(posX, posY+1)=='@' && jumping<=0)
+		{
+			w.SetBlock(' ', posX, posY);
+			posY -= 2;
+			p.Move(posX, posY);
+			p.setHealth(-5);
+			jumping++;
+		}
 }
 
 void Movement()
@@ -94,6 +102,13 @@ void Movement()
 				p.Move(posX, posY);
 				p.setCoin(1);
 			}
+			else if(w.BlockAt(posX-1, posY)=='@')
+			{
+				w.SetBlock(' ', posX, posY);
+				posX += 2;
+				p.Move(posX, posY);
+				p.setHealth(-5);
+			}
 		}
 
 		//RIGHT
@@ -119,6 +134,13 @@ void Movement()
 				posX++;
 				p.Move(posX, posY);
 				p.setCoin(1);
+			}
+			else if(w.BlockAt(posX+1, posY)=='@')
+			{
+				w.SetBlock(' ', posX, posY);
+				posX -= 2;
+				p.Move(posX, posY);
+				p.setHealth(-5);
 			}
 		}
 

@@ -23,13 +23,13 @@ void Player::Tick()
 
 void Player::PrintStats()
 {
-	cout<<health<<" "<<char(03)<<"  "<<coin<<" $";	
+	cout<<"\n\t"<<health<<" "<<char(03)<<"\t"<<coin<<" $";	
 	cout<<endl;
 }
 
 void Player::setHealth(int setH)
 {
-	health = setH;
+	health += setH;
 }
 
 void Player::setCoin(int setC)
