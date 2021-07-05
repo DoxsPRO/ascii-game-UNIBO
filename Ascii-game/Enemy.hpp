@@ -13,7 +13,8 @@ class Enemy
 			int lastFire=10;
 		};
 		
-		Nodo enemies[10];
+		Nodo enemies[20];
+		int count=0;
 	
 	public:
 		void ScanEnemy(char **map);
