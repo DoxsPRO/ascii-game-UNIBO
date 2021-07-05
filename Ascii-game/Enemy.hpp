@@ -14,9 +14,9 @@ class Enemy
 		};
 		
 		Nodo enemies[20];
-		int count=0;
 	
 	public:
+		int count=0;
 		void ScanEnemy(char **map);
 		int EnemyAt(int x, int y); //restituisce l'id
 		void Clear();
