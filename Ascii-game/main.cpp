@@ -107,35 +107,14 @@ void Movement()
 		//FIRE
 		if (key == 32)
 		{
-			int posP = posX + 1;
-			int a = 0;
-			while(a<=5)
-			{
-				if(w.BlockAt(posP, posY)==' ')
-				{
-					if(a == 0)
-					{
-						w.SetBlock('-', posP, posY);
-						posP++;
-					}
-					else 
-					{
-						w.SetBlock(' ', posP-2, posY);
-						w.SetBlock('-', posP++, posY);
-					}	
-				}
-				a++;
-			}
-				
-				
+			bt.SpawnBullet(posX, posY, 1);
 		}
-		//SPAWN ENEMY
-		if(key == 112) //p
-		{
-			
-		}			
-		cout<<key<<endl;
+				
+		cout<<key<<endl;		
 	}
+				
+		
+	
 }
 
 void Tick()
