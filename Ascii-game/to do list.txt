@@ -1,5 +1,4 @@
 Main
-1)Scena finale
 
 Enemy
 -tipi di nemici
@@ -8,6 +7,6 @@ Enemy
 
 
 Proiettili
--Aumento danno 
+
 ------------
 Personaggio
