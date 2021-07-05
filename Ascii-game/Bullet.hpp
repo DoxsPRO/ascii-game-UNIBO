@@ -17,6 +17,7 @@ class Bullet
 		char **Tick(char **map);
 		void SpawnBullet(int x, int y, int d);
 		void Clear();
+		void Delete();
 		
 		
 		

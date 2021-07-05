@@ -78,6 +78,7 @@ char **Chunks::GetRandom()
 	{
 		for(int j=0; j<32 ; j++)
 		{
+			
 			temp[j][i]=t->chunk[j][i];
 		}
 	}
