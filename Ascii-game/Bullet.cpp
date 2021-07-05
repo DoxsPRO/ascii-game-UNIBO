@@ -24,6 +24,8 @@ char **Bullet::Tick(char **map)
 			map[bullets[i].x][bullets[i].y]='-';
 		}
 		
+		
+		bullets[i].time--;
 	}
 	
 	
@@ -39,13 +41,23 @@ void Bullet::SpawnBullet(int x, int y, int d)
 	bullets[count].y=y;
 	bullets[count].d=d;
 	bullets[count].id=count;
+	bullets[count].time=5;
 	
 	count++;
 }
 
-void Bullet::Delete(int id)
+char **Bullet::Delete(char **map)
 {
+	for(int i=0; i<count; i++)
+	{
+		if(bullets[i].active)
+		{
+			bullets[i].active=false;
+			map[bullets[i].x][bullets[i].y]=' ';
+		}
+	}
 	
+	return map;
 }
 
 void Bullet::Clear()

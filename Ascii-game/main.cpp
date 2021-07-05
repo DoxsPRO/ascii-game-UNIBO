@@ -86,13 +86,13 @@ void Movement()
 				w.SetBlock(' ', posX, posY);
 				if(w.PreviousSection())
 				{
+					
+					w.Copy(bt.Delete(w.GetMap()));
 					posX=95;
 					p.Move(posX, posY);
 				}
 				else
-					w.SetBlock('P', posX, posY);
-		
-				
+					w.SetBlock('P', posX, posY);	
 			}
 			else if(w.BlockAt(posX-1, posY)=='$')
 			{
@@ -122,6 +122,7 @@ void Movement()
 			}
 			else if(posX==95)
 			{
+				w.Copy(bt.Delete(w.GetMap()));
 				w.SetBlock(' ', posX, posY);
 				w.NextSection();
 				posX=0;
