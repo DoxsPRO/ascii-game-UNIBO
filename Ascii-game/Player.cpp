@@ -23,8 +23,7 @@ void Player::Tick()
 
 void Player::PrintStats()
 {
-	cout<<"\n\t"<<health<<" "<<char(03)<<"\t"<<coin<<" $";	
-	cout<<endl;
+	cout<<"\n\t"<<health<<" "<<char(03)<<"\t"<<coin<<" $";
 }
 
 void Player::setHealth(int setH)

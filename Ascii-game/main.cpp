@@ -229,7 +229,7 @@ void Tick()
 	Gravity();
 	firing--;
 	Movement();
-	en.SetDamage(-0.1);
+	en.SetDamage(-0.05);
 	
 	char **map=w.GetMap();
 	map=en.Tick(map);
@@ -270,7 +270,7 @@ int main(int argc, char** argv) {
 		w.SetBlock('P', posX, posY);
 		w.Print();
 		p.PrintStats();
-		cout<<"Damage: "<<en.getDamage()<<"x"<<endl;
+		cout<<"\t "<<en.getDamage()<<"\tDMG"<<endl;
 		
 		cout<<posX<<" "<<posY<<endl;
 		cout<<"Tot. enemy= "<<en.count<<endl;
