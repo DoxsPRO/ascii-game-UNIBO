@@ -1,4 +1,3 @@
-#include "Bullet.hpp"
 class Enemy
 {
 	protected:
@@ -15,7 +14,6 @@ class Enemy
 			int still=0;
 			int lastFire;
 		};
-		Bullet bt;
 		
 		Nodo enemies[20];
 		double mulD=1.0; //moltiplicatore danno inflitto
