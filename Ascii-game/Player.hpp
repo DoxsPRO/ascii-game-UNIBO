@@ -10,6 +10,7 @@ class Player
 		void GetPosition(int &posX, int &posY);
 		void Move(int posX, int posY);
 		void setHealth(int setH);
+		int getHealth();
 		void setCoin(int setC);
 		void Tick();
 		void PrintStats();

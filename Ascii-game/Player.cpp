@@ -37,5 +37,9 @@ void Player::setCoin(int setC)
 	coin += setC;
 }
 
+int Player::getHealth()
+{
+	return health;
+}
 
 
