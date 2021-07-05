@@ -34,7 +34,7 @@ char **Enemy::Tick(char **map)
 			enemies[i].still--;
 			if(map[enemies[i].x-1][enemies[i].y]=='-')//damage
 			{
-				enemies[i].health-=50;
+				enemies[i].health-=40*mulD;
 				map[enemies[i].x-1][enemies[i].y]=' ';
 				
 			}
@@ -72,6 +72,12 @@ char **Enemy::Tick(char **map)
 		}
 	}
 	return map;
+}
+
+void Enemy::SetDamage(int x)
+{
+	mulD=x;
+	
 }
 
 
