@@ -40,6 +40,37 @@ char **Enemy::Tick(char **map)
 	for(int i=0; i<count; i++)
 	{
 		if(enemies[i].alive)
+		{
+			if(map[enemies[i].x-1][enemies[i].y] == '-')
+			{
+				enemies[i].health -= 10;
+				
+				if(enemies[i].health <= 0)
+				{
+					enemies[i].alive = false;
+				}
+			}
+			else if(map[enemies[i].x-1][enemies[i].y] == '=')
+			{
+				if(map[enemies[i].x+1][enemies[i].y] != '=' && map[enemies[i].x+1][enemies[i].y] != '$' && map[enemies[i].x+1][enemies[i].y] != '@')
+				{
+					if(enemies[i].x<95)
+						enemies[i].x++;
+					//aggiungere alternativa
+				}		
+			}
+			else if(map[enemies[i].x-1][enemies[i].y] == '$')
+			{
+				if(enemies[i].x>=2 && map[enemies[i].x-2][enemies[i].y] != '=' && map[enemies[i].x-2][enemies[i].y] != '$' && map[enemies[i].x-2][enemies[i].y] != '@')
+					enemies[i].x -= 2;
+				else if(map[enemies[i].x+1][enemies[i].y] != '=' && map[enemies[i].x+1][enemies[i].y] != '$' && map[enemies[i].x+1][enemies[i].y] != '@')
+				{
+					if(enemies[i].x<95)
+						enemies[i].x++;
+					//aggiungere alternativa
+				}
+			}
+		}
 	}
 	return map;
 }
