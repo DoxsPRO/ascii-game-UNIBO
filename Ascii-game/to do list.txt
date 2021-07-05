@@ -8,9 +8,10 @@ Enemy
 -Scan
 -Morte
 
-Player
--Raccolta coin
-
 Proiettili
 -Movimenti
 -Collissione
+
+------------
+Personaggio
+-Coin (Raccolta destra sinistra e sotto)

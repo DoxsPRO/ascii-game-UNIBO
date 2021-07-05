@@ -47,6 +47,15 @@ void Gravity()
 			}
 			jumping--;
 		}
+		else if(w.BlockAt(posX, posY+1)=='$' && jumping<=0)
+			{
+				w.SetBlock(' ', posX, posY);
+				w.SetBlock(' ', posX, posY+1);
+				posX++;
+				p.Move(posX, posY);
+				p.setCoin(1);
+				jumping++;
+			}
 }
 
 void Movement()
