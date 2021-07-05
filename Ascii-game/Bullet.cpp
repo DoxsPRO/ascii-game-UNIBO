@@ -6,26 +6,32 @@ char **Bullet::Tick(char **map)
 {
 	for(int i=0; i<count; i++)
 	{
+		if(bullets[i].active && bullets[i].time<=0)
+		{
+			bullets[i].active=false;
+			map[bullets[i].x][bullets[i].y]=' ';
+		}
+		
 		if(bullets[i].active && bullets[i].x<95 && map[bullets[i].x+bullets[i].d][bullets[i].y]==' ')
 		{
 			map[bullets[i].x][bullets[i].y]=' ';
 			bullets[i].x+=bullets[i].d;
 			map[bullets[i].x][bullets[i].y]='-';
 		}
-		else if(bullets[i].x>=95 || map[bullets[i].x+bullets[i].d][bullets[i].y]=='=')
+		else if(bullets[i].active && bullets[i].x>=95 || map[bullets[i].x+bullets[i].d][bullets[i].y]=='=')
 		{
 			map[bullets[i].x][bullets[i].y]=' ';
 			bullets[i].active=false;
 		}
-		else if(map[bullets[i].x+bullets[i].d][bullets[i].y]=='$')
+		else if(bullets[i].active && map[bullets[i].x+bullets[i].d][bullets[i].y]=='$')
 		{
 			map[bullets[i].x][bullets[i].y]=' ';
 			bullets[i].x+=bullets[i].d*2;
 			map[bullets[i].x][bullets[i].y]='-';
 		}
 		
-		
 		bullets[i].time--;
+			
 	}
 	
 	
@@ -41,7 +47,7 @@ void Bullet::SpawnBullet(int x, int y, int d)
 	bullets[count].y=y;
 	bullets[count].d=d;
 	bullets[count].id=count;
-	bullets[count].time=5;
+	bullets[count].time=10;
 	
 	count++;
 }
@@ -58,14 +64,4 @@ char **Bullet::Delete(char **map)
 	}
 	
 	return map;
-}
-
-void Bullet::Clear()
-{
-	for(int i=0; i<count ; i++)
-	{
-		bullets[i].active=false;
-	}
-	
-	count=0;
 }
