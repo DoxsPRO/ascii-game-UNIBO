@@ -25,17 +25,6 @@ void Enemy::ScanEnemy(char **map)
 	}
 }
 
-
-int Enemy::EnemyAt(int x, int y)
-{
-	
-}
-
-void Enemy::Clear()
-{
-	
-}
-
 char **Enemy::Tick(char **map)
 {
 	for(int i=0; i<count; i++)

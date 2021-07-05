@@ -17,13 +17,10 @@ class Enemy
 		
 		
 		Nodo enemies[20];
-		
-	
+
 	public:
 		int count=0;
 		void ScanEnemy(char **map);
-		int EnemyAt(int x, int y); //restituisce l'id
-		void Clear();
 		char **Tick(char **map);
 		
 		

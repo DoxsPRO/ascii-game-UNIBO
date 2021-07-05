@@ -14,6 +14,7 @@ Enemy en;
 Bullet bt;
 int posX, posY;
 int jumping=0, firing=0;
+int diff=1;
 
 void Setup()
 {
@@ -61,7 +62,7 @@ void Gravity()
 			w.SetBlock(' ', posX, posY);
 			posY -= 2;
 			p.Move(posX, posY);
-			p.setHealth(-5);
+			p.setHealth(-1*diff);
 			jumping++;
 		}
 }
@@ -90,6 +91,7 @@ void Movement()
 					en.ScanEnemy(w.GetMap());
 					posX=95;
 					p.Move(posX, posY);
+					diff--;
 				}
 				else
 					w.SetBlock('P', posX, posY);	
@@ -115,7 +117,7 @@ void Movement()
 				w.SetBlock(' ', posX, posY);
 				posX += 2;
 				p.Move(posX, posY);
-				p.setHealth(-5);
+				p.setHealth(-1*diff);
 			}
 		}
 
@@ -136,6 +138,7 @@ void Movement()
 				en.ScanEnemy(w.GetMap());
 				posX=0;
 				p.Move(posX, posY);
+				diff++;
 			}
 			else if(w.BlockAt(posX+1, posY)=='$')
 			{
@@ -158,7 +161,7 @@ void Movement()
 				w.SetBlock(' ', posX, posY);
 				posX -= 2;
 				p.Move(posX, posY);
-				p.setHealth(-5);
+				p.setHealth(-1*diff);
 			}
 		}
 
