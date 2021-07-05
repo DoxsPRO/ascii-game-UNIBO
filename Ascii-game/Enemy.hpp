@@ -17,13 +17,13 @@ class Enemy
 		
 		
 		Nodo enemies[20];
-		int mulD=1; //moltiplicatore danno inflitto
+		double mulD=1.0; //moltiplicatore danno inflitto
 
 	public:
 		int count=0;
 		void ScanEnemy(char **map);
 		char **Tick(char **map);
-		void SetDamage(int x);
-		
+		void SetDamage(double x);
+		double getDamage();
 		
 };

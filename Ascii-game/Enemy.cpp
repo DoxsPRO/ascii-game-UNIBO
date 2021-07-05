@@ -74,11 +74,16 @@ char **Enemy::Tick(char **map)
 	return map;
 }
 
-void Enemy::SetDamage(int x)
+void Enemy::SetDamage(double x)
 {
-	mulD=x;
+	if(mulD >= 1 && mulD <= 8)
+		mulD+=x;
 	
 }
 
+double Enemy::getDamage()
+{
+	return mulD;
+}
 
 

@@ -74,13 +74,13 @@ void Gravity()
 			p.setHealth(5);
 			jumping++;;
 		}
-		else if(w.BlockAt(posX, posY+1)==04 && jumping<=0)
+		else if(w.BlockAt(posX, posY+1)==05 && jumping<=0)
 		{
 			w.SetBlock(' ', posX, posY);
 			w.SetBlock(' ', posX, posY+1);
 			posX++;
 			p.Move(posX, posY);
-			en.setDagame(4);
+			en.SetDamage(4);
 			jumping++;;
 		}
 }
@@ -130,13 +130,13 @@ void Movement()
 				p.Move(posX, posY);
 				p.setHealth(5);
 			}
-			else if(w.BlockAt(posX-1, posY)==04)
+			else if(w.BlockAt(posX-1, posY)==05)
 			{
 				w.SetBlock(' ', posX, posY);
 				posX--;
 				w.SetBlock(' ', posX, posY); //cancello pow
 				p.Move(posX, posY);
-				en.setDagame(4);
+				en.SetDamage(4);
 			}
 			else if(w.BlockAt(posX-1, posY)=='@')
 			{
@@ -182,13 +182,13 @@ void Movement()
 				p.Move(posX, posY);
 				p.setHealth(5);
 			}
-			else if(w.BlockAt(posX+1, posY)==04)
+			else if(w.BlockAt(posX+1, posY)==05)
 			{
 				w.SetBlock(' ', posX, posY);
 				posX++;
 				w.SetBlock(' ', posX, posY); //cancello pow
 				p.Move(posX, posY);
-				en.setDagame(4);
+				en.SetDamage(4);
 			}
 			else if(w.BlockAt(posX+1, posY)=='@')
 			{
@@ -229,6 +229,7 @@ void Tick()
 	Gravity();
 	firing--;
 	Movement();
+	en.SetDamage(-0.1);
 	
 	char **map=w.GetMap();
 	map=en.Tick(map);
@@ -269,7 +270,7 @@ int main(int argc, char** argv) {
 		w.SetBlock('P', posX, posY);
 		w.Print();
 		p.PrintStats();
-		
+		cout<<"Damage: "<<en.getDamage()<<"x"<<endl;
 		
 		cout<<posX<<" "<<posY<<endl;
 		cout<<"Tot. enemy= "<<en.count<<endl;
