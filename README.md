@@ -1,7 +1,16 @@
 # ASCII-GAME-UNIBO
-Il titolo del repository.
 Gioco in C++ con grafica ASCII
 
 - [Come iniziare](#come-iniziare)
-- [Segnalazione bug e richieste](#segnalazione-bug-e-richieste-di-aiuto)
-- [Come contribuire](#come-contribuire)
+- [Struttura del progetto](#Struttura-del-progetto)
+- [Documentazione](#documentazione)
+- [Autori](#Autori)
+
+# Come iniziare
+Il gioco si avvia tramite l'eseguibile "Programmazione.exe".
+
+# Struttura del progetto
+
+# Documentazione
+
+# Autori
