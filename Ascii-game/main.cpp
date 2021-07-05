@@ -65,6 +65,15 @@ void Gravity()
 			p.setHealth(-1*diff);
 			jumping++;
 		}
+		else if(w.BlockAt(posX, posY+1)==03 && jumping<=0)
+		{
+			w.SetBlock(' ', posX, posY);
+			w.SetBlock(' ', posX, posY+1);
+			posX++;
+			p.Move(posX, posY);
+			p.setHealth(5);
+			jumping++;;
+		}
 }
 
 void Movement()
