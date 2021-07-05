@@ -51,6 +51,17 @@ void World::CaricaMat(Nodo *n)
 	}
 }
 
+void World::SalvaMat(Nodo *n)
+{
+	for(int i=0; i<16; i++)
+	{
+		for(int j=0; j<96; j++)
+		{
+			n->sec[j][i]=map[j][i];
+		}
+	}
+}
+
 void World::Print()
 {
 	SetConsoleCursorPosition(GetStdHandle( STD_OUTPUT_HANDLE), {0,0});
@@ -85,7 +96,8 @@ void World::NextSection()
 {
 	if(pointer->next==NULL)
 		CreaNodo();
-		
+	
+	SalvaMat(pointer);
 	pointer=pointer->next;
 	CaricaMat(pointer);
 }
