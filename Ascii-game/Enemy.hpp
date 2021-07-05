@@ -12,9 +12,8 @@ class Enemy
 			double diffuculty = 1;
 			bool alive=false;
 			int still=0;
-			int lastFire=10;
+			int lastFire;
 		};
-		
 		
 		Nodo enemies[20];
 		double mulD=1.0; //moltiplicatore danno inflitto

@@ -21,6 +21,7 @@ void Enemy::ScanEnemy(char **map)
 				enemies[count].y = i;
 				enemies[count].alive = true;
 				enemies[count].health=100;
+				enemies[count].lastFire=10;
 				count++;
 				numEnemy++;
 			}

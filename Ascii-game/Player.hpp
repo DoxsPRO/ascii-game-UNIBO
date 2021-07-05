@@ -1,3 +1,5 @@
+
+#include "Bullet.hpp"
 class Player 
 {
 	protected:
@@ -5,6 +7,8 @@ class Player
 		char ascii='O';
 		int health = 100;
 		int coin = 0;
+		Bullet bt;
+		
 		
 	public:
 		void GetPosition(int &posX, int &posY);
@@ -14,4 +18,7 @@ class Player
 		int getCoin();
 		void setCoin(int setC);
 		void PrintStats();
+		char **BTick(char **map);
+		void SpawnBullet(int x, int y, int d);
+		char **Delete(char **map);
 };
