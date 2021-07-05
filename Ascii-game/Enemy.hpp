@@ -13,6 +13,7 @@ class Enemy
 			int lastFire=10;
 		};
 		
+		
 		Nodo enemies[20];
 	
 	public:

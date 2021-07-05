@@ -88,6 +88,7 @@ void Movement()
 				{
 					
 					w.Copy(bt.Delete(w.GetMap()));
+					en.ScanEnemy(w.GetMap());
 					posX=95;
 					p.Move(posX, posY);
 				}
@@ -125,6 +126,7 @@ void Movement()
 				w.Copy(bt.Delete(w.GetMap()));
 				w.SetBlock(' ', posX, posY);
 				w.NextSection();
+				en.ScanEnemy(w.GetMap());
 				posX=0;
 				p.Move(posX, posY);
 			}
@@ -191,6 +193,7 @@ void endGame()
 int main(int argc, char** argv) {	
 	
 	Setup();
+	en.ScanEnemy(w.GetMap());
 	
 	while(true)
 	{
@@ -199,7 +202,10 @@ int main(int argc, char** argv) {
 		w.SetBlock('P', posX, posY);
 		w.Print();
 		p.PrintStats();
+		
+		
 		cout<<posX<<" "<<posY<<endl;
+		cout<<"Tot. enemy= "<<en.count<<endl;
 		
 		if(p.getHealth() <= 0)
 		{

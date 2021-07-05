@@ -6,6 +6,8 @@ using namespace std;
 
 void Enemy::ScanEnemy(char **map)
 {
+	count=0;
+	
 	for(int i=0;i<16;i++)
 	{
 		for(int j=0;j<96;j++)
@@ -35,6 +37,10 @@ void Enemy::Clear()
 
 char **Enemy::Tick(char **map)
 {
+	for(int i=0; i<count; i++)
+	{
+		if(enemies[i].alive)
+	}
 	return map;
 }
 
