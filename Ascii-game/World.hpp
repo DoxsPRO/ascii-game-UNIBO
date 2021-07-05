@@ -29,7 +29,5 @@ class World
 		void SalvaMat(Nodo *n);
 		char **GetMap();
 		void Copy(char **m);
-		//crea chunk
-		
 		
 };

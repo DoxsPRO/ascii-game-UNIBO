@@ -170,6 +170,7 @@ char **World::GetMap()
 	
 	return temp;
 }
+
 	
 		
 		

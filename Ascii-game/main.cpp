@@ -205,7 +205,22 @@ void Tick()
 
 void endGame()
 {
-	cout<<"GAME OVER"<<endl;
+	cout<<"                                                                                                "<<endl;
+	cout<<"                                                                                                "<<endl;
+	cout<<"          OOOOOO   OOOOOO   OO   OO   OOOOOO         OOOOOO   O       O   OOOOOO   OOOOO        "<<endl;
+	cout<<"          O        O    O   O O O O   O              O    O    O     O    O        O   O        "<<endl;
+	cout<<"          O  OOO   OOOOOO   O  O  O   OOOOOO         O    O     O   O     OOOOOO   OOOOO        "<<endl;
+	cout<<"          O    O   O    O   O     O   O              O    O      O O      O        O O          "<<endl;
+	cout<<"          OOOOOO   O    O   O     O   OOOOOO         OOOOOO       O       OOOOOO   O  OO        "<<endl;
+	cout<<"                                                                                                "<<endl;
+	cout<<"                                                                                                "<<endl;
+	cout<<"                                                                                                "<<endl;
+	cout<<"                                                                                                "<<endl;
+	cout<<"                                                                         -Domenico Ciancio      "<<endl;
+	cout<<"                                                                         -Orazio Capone         "<<endl;
+	cout<<"                                                                         -Cosimo Coppolaro      "<<endl;
+	cout<<"                                                                                                "<<endl;
+	cout<<"================================================================================================"<<endl;
 }
 
 int main(int argc, char** argv) {	
@@ -234,11 +249,7 @@ int main(int argc, char** argv) {
 	}
 	system("cls");
 	endGame();
-	
-	while(true)
-	{
-		
-	}
+	cout<<"Hai raccolto in totale: "<<p.getCoin()<<"$ !"<<endl;
 	system("pause");
 	return 0;
 }

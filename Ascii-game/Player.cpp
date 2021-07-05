@@ -42,4 +42,8 @@ int Player::getHealth()
 	return health;
 }
 
+int Player::getCoin()
+{
+	return coin;
+}
 
