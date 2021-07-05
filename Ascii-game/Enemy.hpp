@@ -17,6 +17,7 @@ class Enemy
 		
 		
 		Nodo enemies[20];
+		
 	
 	public:
 		int count=0;
