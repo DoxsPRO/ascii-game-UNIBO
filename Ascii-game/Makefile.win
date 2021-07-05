@@ -4,11 +4,11 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o World.o Player.o Chunks.o Enemy.o Bullet.o
-LINKOBJ  = main.o World.o Player.o Chunks.o Enemy.o Bullet.o
-LIBS     = -L"E:/programmi/Dev-Cpp/MinGW64/lib" -L"E:/programmi/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib"
-INCS     = -I"E:/programmi/Dev-Cpp/MinGW64/include" -I"E:/programmi/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/programmi/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"E:/programmi/Dev-Cpp/MinGW64/include" -I"E:/programmi/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/programmi/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/programmi/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+OBJ      = main.o World.o Player.o Chunks.o Enemy.o
+LINKOBJ  = main.o World.o Player.o Chunks.o Enemy.o
+LIBS     = -L"D:/Programmi/Dev-Cpp/MinGW64/lib" -L"D:/Programmi/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Programmi/Dev-Cpp/MinGW64/include" -I"D:/Programmi/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programmi/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Programmi/Dev-Cpp/MinGW64/include" -I"D:/Programmi/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programmi/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Programmi/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = Programmazione.exe
 CXXFLAGS = $(CXXINCS) -std=c99
 CFLAGS   = $(INCS) -std=c99
@@ -38,6 +38,3 @@ Chunks.o: Chunks.cpp
 
 Enemy.o: Enemy.cpp
 	$(CPP) -c Enemy.cpp -o Enemy.o $(CXXFLAGS)
-
-Bullet.o: Bullet.cpp
-	$(CPP) -c Bullet.cpp -o Bullet.o $(CXXFLAGS)
