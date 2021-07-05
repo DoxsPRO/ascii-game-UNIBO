@@ -26,6 +26,8 @@ class World
 		void CreaNodo();
 		void App(); //append
 		void CaricaMat(Nodo *n);
+		char **GetMap();
+		void Copy(char **m);
 		//crea chunk
 		
 		

@@ -4,6 +4,17 @@
 #include "Chunks.hpp"
 using namespace std;
 
+void World::Copy(char **m)
+{
+	for(int i=0; i<16 ; i++)
+	{
+		for(int j=0; j<96 ; j++)
+		{
+			map[j][i]=m[j][i];
+		}
+	}
+}
+
 
 void World::Init()
 {
@@ -131,6 +142,25 @@ void World::CreaNodo()
 	}
 	
 	
+}
+
+char **World::GetMap()
+{
+	
+	char **temp=new char *[96];
+	
+	for(int i=0; i<96; i++)
+		temp[i]=new char[16];
+		
+	for(int i=0; i<16 ; i++)
+	{
+		for(int j=0; j<96 ; j++)
+		{
+			temp[j][i]=map[j][i];
+		}
+	}
+	
+	return temp;
 }
 	
 		

@@ -3,11 +3,15 @@
 #include <conio.h>
 #include "Player.hpp"
 #include "World.hpp"
+#include "Enemy.hpp"
+#include "Bullet.hpp"
 using namespace std;
 
 
 Player p;
 World w;
+Enemy en;
+Bullet bt;
 int posX, posY;
 int jumping=0;
 
@@ -134,11 +138,16 @@ void Movement()
 	}
 }
 
-void Collisions()
+void Tick()
 {
+	Gravity();
+	Movement();
 	
+	char **map=w.GetMap();
+	map=en.Tick(map);
+	map=bt.Tick(map);
 	
-	
+	w.Copy(map);
 }
 
 int main(int argc, char** argv) {	
@@ -146,9 +155,7 @@ int main(int argc, char** argv) {
 	Setup();
 	while(true)
 	{
-		Gravity();
-		Movement();
-		Collisions();
+		Tick();
 		
 		w.SetBlock('P', posX, posY);
 		w.Print();
