@@ -147,6 +147,7 @@ void Tick()
 	map=en.Tick(map);
 	map=bt.Tick(map);
 	
+	w.Copy(map);
 }
 
 int main(int argc, char** argv) {	

@@ -4,6 +4,17 @@
 #include "Chunks.hpp"
 using namespace std;
 
+void World::Copy(char **m)
+{
+	for(int i=0; i<16 ; i++)
+	{
+		for(int j=0; j<96 ; j++)
+		{
+			map[j][i]=m[j][i];
+		}
+	}
+}
+
 
 void World::Init()
 {
