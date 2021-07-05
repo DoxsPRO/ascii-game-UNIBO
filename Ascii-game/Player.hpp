@@ -1,4 +1,3 @@
-
 #include "Bullet.hpp"
 class Player 
 {
