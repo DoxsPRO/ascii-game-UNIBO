@@ -16,11 +16,6 @@ void Player::Move(int posX, int posY)
 	y=posY;
 }
 
-void Player::Tick()
-{
-
-}
-
 void Player::PrintStats()
 {
 	cout<<"\n\t"<<health<<" "<<char(03)<<"\t"<<coin<<" $";

@@ -18,6 +18,7 @@ class Enemy
 		
 		Nodo enemies[20];
 		double mulD=1.0; //moltiplicatore danno inflitto
+		int killed=0;
 
 	public:
 		int count=0;
@@ -25,5 +26,6 @@ class Enemy
 		char **Tick(char **map);
 		void SetDamage(double x);
 		double getDamage();
+		int GetKilled();
 		
 };

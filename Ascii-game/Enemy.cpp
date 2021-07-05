@@ -19,6 +19,7 @@ void Enemy::ScanEnemy(char **map)
 				enemies[count].x = j;
 				enemies[count].y = i;
 				enemies[count].alive = true;
+				enemies[count].health=100;
 				count++;
 			}
 		}
@@ -42,6 +43,7 @@ char **Enemy::Tick(char **map)
 			{
 				map[enemies[i].x][enemies[i].y]=' ';
 				enemies[i].alive=false;
+				killed++;
 				
 				continue;
 			}
@@ -89,4 +91,8 @@ double Enemy::getDamage()
 	return mulD;
 }
 
+int Enemy::GetKilled()
+{
+	return killed;
+}
 
