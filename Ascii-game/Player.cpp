@@ -34,7 +34,7 @@ void Player::setHealth(int setH)
 
 void Player::setCoin(int setC)
 {
-	coin = setC;
+	coin += setC;
 }
 
 

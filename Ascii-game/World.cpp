@@ -81,11 +81,6 @@ void World::SetBlock(char c, int x, int y)
 	map[x][y]=c;
 }
 
-
-
-
-
-
 void World::NextSection()
 {
 	if(pointer->next==NULL)

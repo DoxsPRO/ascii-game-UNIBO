@@ -77,6 +77,14 @@ void Movement()
 		
 				
 			}
+			else if(w.BlockAt(posX-1, posY)=='$')
+			{
+				w.SetBlock(' ', posX, posY);
+				posX--;
+				w.SetBlock(' ', posX, posY); //cancello dollaro
+				p.Move(posX, posY);
+				p.setCoin(1);
+			}
 		}
 
 		//RIGHT
@@ -94,6 +102,14 @@ void Movement()
 				w.NextSection();
 				posX=0;
 				p.Move(posX, posY);
+			}
+			else if(w.BlockAt(posX+1, posY)=='$')
+			{
+				w.SetBlock(' ', posX, posY);
+				w.SetBlock(' ', posX+1, posY);
+				posX++;
+				p.Move(posX, posY);
+				p.setCoin(1);
 			}
 		}
 
@@ -132,6 +148,7 @@ void Tick()
 int main(int argc, char** argv) {	
 	
 	Setup();
+	
 	while(true)
 	{
 		Tick();

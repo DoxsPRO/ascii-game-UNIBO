@@ -1,7 +1,7 @@
 class Player 
 {
 	protected:
-		int x=0, y=0;
+		int x=0, y=14;
 		char ascii='O';
 		int health = 100;
 		int coin = 0;
