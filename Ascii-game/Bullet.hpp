@@ -8,7 +8,7 @@ class Bullet
 			int damage = 10;
 			bool active=false;
 			int id;
-			int time=10;
+			int time=15;
 		};
 		
 		int count=0;

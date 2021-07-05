@@ -47,7 +47,7 @@ void Bullet::SpawnBullet(int x, int y, int d)
 	bullets[count].y=y;
 	bullets[count].d=d;
 	bullets[count].id=count;
-	bullets[count].time=10;
+	bullets[count].time=15;
 	
 	count++;
 }

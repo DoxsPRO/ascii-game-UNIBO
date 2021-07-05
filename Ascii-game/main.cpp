@@ -13,7 +13,7 @@ World w;
 Enemy en;
 Bullet bt;
 int posX, posY;
-int jumping=0;
+int jumping=0, firing=0;
 
 void Setup()
 {
@@ -155,7 +155,13 @@ void Movement()
 		//FIRE
 		if (key == 32)
 		{
-			bt.SpawnBullet(posX, posY, 1);
+			if(firing<=0)
+			{
+				bt.SpawnBullet(posX, posY, 1);
+				firing=3;
+			}			
+				
+			firing--;
 		}
 				
 		cout<<key<<endl;		
@@ -179,7 +185,7 @@ void Tick()
 
 void endGame()
 {
-
+	cout<<"GAME OVER"<<endl;
 }
 
 int main(int argc, char** argv) {	
@@ -205,6 +211,10 @@ int main(int argc, char** argv) {
 	system("cls");
 	endGame();
 	
+	while(true)
+	{
+		
+	}
 	system("pause");
 	return 0;
 }
