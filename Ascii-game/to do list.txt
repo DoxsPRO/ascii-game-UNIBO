@@ -2,11 +2,12 @@ Main
 1)Scena finale
 
 Enemy
+-tipi di nemici
 -Sparo
 //molto forse radom
 
 
 Proiettili
-
+-Aumento danno 
 ------------
 Personaggio

@@ -64,3 +64,4 @@ char **Bullet::Delete(char **map)
 	
 	return map;
 }
+

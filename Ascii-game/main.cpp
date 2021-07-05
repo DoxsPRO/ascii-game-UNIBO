@@ -74,6 +74,15 @@ void Gravity()
 			p.setHealth(5);
 			jumping++;;
 		}
+		else if(w.BlockAt(posX, posY+1)==04 && jumping<=0)
+		{
+			w.SetBlock(' ', posX, posY);
+			w.SetBlock(' ', posX, posY+1);
+			posX++;
+			p.Move(posX, posY);
+			en.setDagame(4);
+			jumping++;;
+		}
 }
 
 void Movement()
@@ -121,6 +130,14 @@ void Movement()
 				p.Move(posX, posY);
 				p.setHealth(5);
 			}
+			else if(w.BlockAt(posX-1, posY)==04)
+			{
+				w.SetBlock(' ', posX, posY);
+				posX--;
+				w.SetBlock(' ', posX, posY); //cancello pow
+				p.Move(posX, posY);
+				en.setDagame(4);
+			}
 			else if(w.BlockAt(posX-1, posY)=='@')
 			{
 				w.SetBlock(' ', posX, posY);
@@ -164,6 +181,14 @@ void Movement()
 				w.SetBlock(' ', posX, posY); //cancello cuore
 				p.Move(posX, posY);
 				p.setHealth(5);
+			}
+			else if(w.BlockAt(posX+1, posY)==04)
+			{
+				w.SetBlock(' ', posX, posY);
+				posX++;
+				w.SetBlock(' ', posX, posY); //cancello pow
+				p.Move(posX, posY);
+				en.setDagame(4);
 			}
 			else if(w.BlockAt(posX+1, posY)=='@')
 			{
