@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "attività-main",
+      "appliesTo": "Ascii-game/main.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "attività-main",
+      "appliesTo": "Ascii-game/main.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "attività-main",
+      "appliesTo": "Ascii-game/main.cpp",
+      "type": "launch"
+    }
+  ]
+}
